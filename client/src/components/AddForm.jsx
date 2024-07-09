@@ -12,7 +12,7 @@ function AddForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/create-user", {
+      const res = await axios.post("https://crud-backend-73o3.onrender.com/create-user", {
         username: name,
         email: email,
         age: age,

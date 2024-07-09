@@ -8,7 +8,7 @@ const Home = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/users");
+      const response = await axios.get("https://crud-backend-73o3.onrender.com/users");
       setData(response.data.users);
     } catch (error) {
       console.log("error :", error);
@@ -17,7 +17,7 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/user/${id}`);
+      const res = await axios.delete(`https://crud-backend-73o3.onrender.com/user/${id}`);
       setMessage(res.data.message);
       setTimeout(() => {
         setMessage("");

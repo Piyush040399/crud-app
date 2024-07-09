@@ -13,7 +13,7 @@ function EditForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`http://localhost:5000/user/edit/${id}`, {
+      const res = await axios.post(`https://crud-backend-73o3.onrender.com/user/edit/${id}`, {
         username: name,
         email: email,
         age: age,
@@ -28,7 +28,7 @@ function EditForm() {
 
   const getUserData = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/user/${id}`);
+      const res = await axios.get(`https://crud-backend-73o3.onrender.com/user/${id}`);
       setName(res.data.user.username);
       setEmail(res.data.user.email);
       setAge(res.data.user.age);
